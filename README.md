@@ -105,3 +105,6 @@ Master节点端口
 主从同步起始文件名称，默认可以使用`mysqld-bin.000005`作为其值，具体视情况而定。
 ### MASTER_LOG_POS
 主从同步起始文件位置，默认可以使用`328`作为其值，具体视情况而定。
+
+## 6. 其他说明
+镜像启动时会向`/etc/mysql/conf.d/mariadb.cnf`文件配置随机的`server-id`，小的mariadb复制集群应该不用考虑其会重复的问题，也不用配置`server-id`。
